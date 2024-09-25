@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemy kodutöö</title>
+<h1>Estonglish Udemy JavaScripti ülesanded</h1>
+    <style>
+      #sendItem {
+        background-color: coral;
+        width: 200px;
+        margin: 30px;
+        padding: 30px;
+        transition: 3s all;
+        left: 0;
+      }
+      .leftTrans {
+        left: 3000px !important;
+        position: absolute;
+      }
+    </style>
+
+    <script type="text/javascript">
+      
+
+    alert("Teeme läbi Udemy kursust ja see siin on alert :) ");
+
+    // See on üherealine kommentaar
+
+    /* 
+    See 
+    siin
+    on
+    mitmerealine
+    kommentaar
+    */
+
+    document.write("Hakkame pihta! <br>");
+
+      var userName = "Liis";
+      document.write(userName + "<br>"); 
+
+      var number = 9;
+      document.write(number + "<br>"); 
+
+      document.write(100 + 39 + "<br>"); 
+
+      var num1 = 12;
+      var num2 = 84;
+
+      document.write(num1 + num2 + "<br>"); 
+
+
+      var num3 = 862;
+      var num4 = 354;
+      document.write(num3 - num4 + "<br>"); 
+
+      var num5 = 421;
+      var num6 = 2;
+      document.write(num5 * num6 + "<br>"); 
+
+      var num7 = 20;
+      var num8 = 5;
+      document.write(num7 / num8 + "<br>"); 
+
+      var num9 = 2;
+      var num10 = 4;
+      num9++;
+
+      document.write(num9 + "<br>"); 
+
+      function ShowGift(giftNumber, prize) {
+        alert(
+          "You received gift number " + giftNumber + ". Your prize is " + prize
+        );
+      }
+
+      function SimpleAddition(num11, num12) {
+        return num11 + num12;
+      }
+
+      var result = SimpleAddition(1, 2);
+      document.write(result + "<br>"); 
+
+      function WishSweetDreams() {
+        document.write("Sweet dreams! <br>");
+      }
+
+      function WishBrightMorning() {
+        document.write("Good morning! <br>");
+      }
+
+      function StartWishes() {
+        WishBrightMorning();
+        WishSweetDreams();
+      }
+
+      StartWishes();
+
+      var checkNum1 = 3;
+      var checkNum2 = 3;
+
+      if (checkNum1 == checkNum2) {
+        document.write("The numbers are equal.<br>"); 
+      }
+
+      var checkNum3 = 5;
+      var checkNum4 = 5;
+
+      if (checkNum3 != checkNum4) {
+        document.write("The numbers are different.<br>");
+      }
+
+      var checkNum5 = 18;
+      var checkNum6 = 9;
+
+      if (checkNum5 > checkNum6) {
+        document.write("18 is greater than 9.<br>"); 
+      }
+
+      var checkNum7 = 18;
+      var checkNum8 = 9;
+
+      if (checkNum7 < checkNum8) {
+        document.write("18 is less than 9.<br>");
+      }
+
+      var checkNum9 = 138;
+      var checkNum10 = 8;
+
+      if (checkNum9 <= checkNum10) {
+        document.write("138 is less than or equal to 8.<br>");
+      }
+
+      var checkNum11 = 113;
+      var checkNum12 = 113;
+
+      if (checkNum11 >= checkNum12) {
+        document.write("113 is greater than or equal to 113.<br>"); 
+      }
+
+      function CutApple() {
+        document.write("Cutting an apple.. <br>");
+      }
+
+      function CutOrange() {
+        document.write("Cutting an orange.. <br>");
+      }
+
+      function CutGrape() {
+        document.write("Cutting a grape.. <br>");
+      }
+
+      var fruitType = "orange";
+
+      if (fruitType == "grape") {
+        CutApple();
+      } else if (fruitType == "orange") {
+        CutOrange();
+      } else {
+        CutGrape();
+      }
+
+      function SnackMachine(waitTime) {
+        switch (waitTime) {
+          case 1:
+            ShowWaitingMessage(waitTime);
+            break;
+          case 2:
+            ShowWaitingMessage(waitTime);
+            break;
+          case 3:
+            ShowWaitingMessage(waitTime);
+            break;
+          default:
+            ShowWaitingMessage(waitTime);
+            break;
+        }
+      }
+
+      function ShowWaitingMessage(time) {
+        alert("Snack machine says you have to wait " + time + " minutes!");
+      }
+
+      for (var i = 1; i <= 5; i++) {
+        document.write("This is number: " + i + "<br>");
+      }
+
+      var characters = new Array("Mickey Mouse", "Donald Duck", "Goofy", "Pluto");
+
+      document.write(characters[3] + "<br>");
+      characters[3] = "Minnie Mouse";
+      document.write(characters[3] + "<br>");
+
+      var characters = new Array("Mickey Mouse", "Donald Duck", "Goofy", "Pluto");
+
+      characters.push("Daisy Duck", "Chip");
+      document.write(characters + "<br>");
+
+      characters.sort();
+      document.write(characters + "<br>");
+
+      function CheckLogin() {
+        var password = document.getElementById("password").value;
+        if (password != "abcd") {
+          alert("Warning! Incorrect password!");
+        } else {
+          // success!
+          var y = document.getElementById("sendItem");
+          y.className += "leftTrans";
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    
+    <h1>Javascript on steroids..</h1>
+
+    <h2>Gift Reveal</h2>
+    <input
+      type="button"
+      value="Gift 1"
+      onclick="ShowGift(1, 'a shiny new watch!')"
+    />
+    <input
+      type="button"
+      value="Gift 2"
+      onclick="ShowGift(2, 'a colorful scarf!')"
+    />
+    <input type="button" value="Gift 3" onclick="ShowGift(3, 'a cat toy!')" />
+
+    <h2>Snack Waiting Machine</h2>
+    <input type="button" value="1" onclick="SnackMachine(1)" />
+    <input type="button" value="2" onclick="SnackMachine(2)" />
+    <input type="button" value="3" onclick="SnackMachine(3)" />
+    <input type="button" value="4" onclick="SnackMachine(7)" />
+
+    <div id="sendItem">
+      <form>
+        Password: <br />
+        <br />
+        <input type="password" id="password" placeholder="Enter password" />
+        <br />
+        <br />
+        <input
+          type="button"
+          id="submit"
+          value="Submit"
+          onclick="CheckLogin();"
+        />
+      </form>
+    </div>
+  </body>
+</html>
